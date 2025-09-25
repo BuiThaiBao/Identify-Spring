@@ -2,6 +2,10 @@ server:
   port: 8080
   servlet:
     context-path: /identity
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: always
 
 spring:
   datasource:
@@ -16,4 +20,10 @@ spring:
 
 jwt:
   signerKey: "OpEa6c/FAqnusCQqixDPxtaNHLZ5sExi6M+2aDAGW+gMUe/yRSqN9mhmaRWb+sJ2"
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.springframework.http.converter.json: DEBUG
+    com.fasterxml.jackson.databind: DEBUG
 

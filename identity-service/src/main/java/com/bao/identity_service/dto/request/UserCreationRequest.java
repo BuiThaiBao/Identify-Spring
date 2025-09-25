@@ -1,6 +1,7 @@
 package com.bao.identity_service.dto.request;
 
 import com.bao.identity_service.exception.ErrorCode;
+import com.bao.identity_service.validator.DobConstraint;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -24,5 +25,7 @@ public class UserCreationRequest {
     String password;
     String firstName;
     String lastName;
+
+    @DobConstraint(min = 16, message = "INVALID_DOB")
     LocalDate dob;
 }

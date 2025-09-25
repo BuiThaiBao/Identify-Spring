@@ -1,5 +1,6 @@
 package com.bao.identity_service.dto.response;
 
+//import com.bao.identity_service.enums.Role;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -18,5 +19,5 @@ public class UserResponse {
     String firstName;
     String lastName;
     LocalDate dob;
-    Set<String> roles;
+    Set<RoleResponse> roles;
 }
