@@ -1,7 +1,5 @@
 package com.bao.identity_service.dto.response;
 
-
-import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -14,4 +12,3 @@ public class AuthenticationResponse {
     String token;
     boolean authenticated;
 }
-
